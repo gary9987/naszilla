@@ -346,7 +346,7 @@ class Nasbench201(Nasbench):
     def __init__(self,
                  dataset='cifar10',
                  data_folder=default_data_folder,
-                 version='1_0'):
+                 version='1_1'):
         self.search_space = 'nasbench_201'
         self.dataset = dataset
         self.index_hash = None

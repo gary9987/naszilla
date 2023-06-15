@@ -126,9 +126,9 @@ class Cell201:
             accs.append(results[key].get_eval('ori-test')['accuracy'])
 
         if deterministic:
-            return round(100-np.mean(accs), 4)   
+            return round(100-np.mean(accs), 10)   
         else:
-            return round(100-np.random.choice(accs), 4)
+            return round(100-np.random.choice(accs), 10)
 
     def get_op_list(self):
         # given a string, get the list of operations

@@ -332,7 +332,7 @@ class Cell101:
                     acc = nasbench.query(api.ModelSpec(matrix=self.matrix, ops=self.ops))['validation_accuracy']
                 if acc not in accs:
                     accs.append(acc)
-            return round(100*(1-np.mean(accs)), 4)  
+            return round(100*(1-np.mean(accs)), 10)  
 
     def get_test_loss(self, nasbench, patience=50, epochs=None, dataset=None):
         """
@@ -345,7 +345,7 @@ class Cell101:
             acc = nasbench.query(api.ModelSpec(matrix=self.matrix, ops=self.ops))['test_accuracy']
             if acc not in accs:
                 accs.append(acc)
-        return round(100*(1-np.mean(accs)), 4)
+        return round(100*(1-np.mean(accs)), 10)
 
     def get_num_params(self, nasbench):
         return nasbench.query(api.ModelSpec(matrix=self.matrix, ops=self.ops))['trainable_parameters']

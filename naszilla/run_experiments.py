@@ -6,6 +6,7 @@ import os
 import pickle
 import numpy as np
 import copy
+from pathlib import Path
 
 from naszilla.params import *
 from naszilla.nas_benchmarks import Nasbench101, Nasbench201, Nasbench301
@@ -88,9 +89,9 @@ def main(args):
         os.mkdir(save_dir)
 
     algo_params = args.algo_params
-    save_path = save_dir + '/' + algo_params + '/'
+    save_path = save_dir + '/' + algo_params + '/' + args.dataset  + '/'
     if not os.path.exists(save_path):
-        os.mkdir(save_path)
+        Path(save_path).mkdir(parents=True, exist_ok=True)
 
     # set up logging
     log_format = '%(asctime)s %(message)s'
