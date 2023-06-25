@@ -89,7 +89,7 @@ def main(args):
         os.mkdir(save_dir)
 
     algo_params = args.algo_params
-    save_path = save_dir + '/' + algo_params + '/' + args.dataset  + '/'
+    save_path = save_dir + '/' + algo_params + '/' + args.search_space + '/' + args.dataset  + '/'
     if not os.path.exists(save_path):
         Path(save_path).mkdir(parents=True, exist_ok=True)
 
