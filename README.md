@@ -1,3 +1,8 @@
+## Introduction By Guan-Ying Chen, July, 2023
+- This is for comparing our work with BANANAS
+- Please follow the original README to install Naszilla including download the required NASBench101 and NASBench201 datasets.
+- Refer to `naszilla/script.sh` to run the experiments for BANANAS.
+## Original Naszilla
 <p align="center"><img src="img/naszilla_banner.png" width=700 /></p>
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE.md)
